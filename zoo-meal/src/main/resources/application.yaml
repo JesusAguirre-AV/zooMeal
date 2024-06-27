@@ -1,0 +1,10 @@
+spring:
+   datasource:
+      username: zoo_meal
+      password: zoo_meal
+      url: jdbc:mysql://localhost:3306/zoo_meal
+      
+   jpa:
+      hibernate:
+         ddl-auto: create
+      show-sql: true
