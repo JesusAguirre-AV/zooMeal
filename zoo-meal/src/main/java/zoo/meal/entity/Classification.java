@@ -15,17 +15,17 @@ import lombok.ToString;
 
 @Entity
 @Data
-public class Classifi {
+public class Classification {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	private Long classifiId;
-	private String order;
-	private String kingdomm;
+	private Long classificationId;
+	private String sorder;
+	private String kingdom;
 	private String phylum;
-	private String speciesClassifi;
+	private String sClassification;
 	@EqualsAndHashCode.Exclude
 	@ToString.Exclude
-	@OneToMany(mappedBy = "classifi",
+	@OneToMany(mappedBy = "classification",
 			cascade = CascadeType.ALL, orphanRemoval = true)
 	private Set<Species> species = new HashSet<>();
 }

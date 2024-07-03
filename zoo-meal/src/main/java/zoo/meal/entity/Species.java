@@ -28,8 +28,8 @@ public class Species {
 	@EqualsAndHashCode.Exclude
 	@ToString.Exclude
 	@ManyToOne(cascade = CascadeType.ALL)
-	@JoinColumn(name = "classifi_id")
-	private Classifi classifi;
+	@JoinColumn(name = "classification_id", nullable = false)
+	private Classification classification;
 	@EqualsAndHashCode.Exclude
 	@ToString.Exclude
 	@ManyToMany(mappedBy = "species", cascade = CascadeType.PERSIST)
