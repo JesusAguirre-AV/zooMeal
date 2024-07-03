@@ -130,7 +130,7 @@ public class ZooMealService {
 										//DIET
 	@Transactional(readOnly = false)
 	public SpeciesDiet saveDiet(Long classificationId, Long speciesId, SpeciesDiet sDiet) {
-		Species species = findSpeciesById(classificationId, speciesId);
+		Species species = findSpeciesById(speciesId, classificationId);
 		Diet diet = findOrCreateDiet(sDiet.getDietId(), speciesId);
 		copyDietFields(diet, sDiet);
 		species.getDiets().add(diet);

@@ -99,7 +99,9 @@ public class ZooMealController {
 		return zooMealService.saveDiet(classificationId, speciesId, sDiet);
 	}
 	@GetMapping("/{classificationId}/species/{speciesId}/diet")
-	public List<SpeciesDiet> listingDiets(){
+	public List<SpeciesDiet> listingDiets(
+			@PathVariable Long classificationId,
+			@PathVariable Long speciesId){
 		log.info("Retrieving all diets.");
 		return zooMealService.retrieveAllDiets();
 	}
